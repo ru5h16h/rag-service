@@ -1,0 +1,10 @@
+.env
+.mypy_cache/
+.nox/
+.pytest_cache/
+.ruff_cache/
+.venv/
+uv.lock
+__pycache__/
+*.pyc
+plans/
