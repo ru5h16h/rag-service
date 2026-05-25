@@ -41,5 +41,7 @@ def tests_all(session: nox.Session) -> None:
 @nox.session
 def format(session: nox.Session) -> None:
     """Run formatters to fix issues automatically."""
+    install_project(session)
     session.run("uv", "run", "black", "src", "tests", external=True)
     session.run("uv", "run", "isort", "src", "tests", external=True)
+    session.run("uv", "run", "ruff", "check", "src", "tests", "--fix", external=True)
