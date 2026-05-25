@@ -112,3 +112,8 @@ markers = [
 
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
+
+[dependency-groups]
+dev = [
+    "ipython>=9.13.0",
+]
