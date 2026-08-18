@@ -8,3 +8,7 @@ uv.lock
 __pycache__/
 *.pyc
 plans/
+data/
+.DS_Store
+prefect.db
+.prefect/

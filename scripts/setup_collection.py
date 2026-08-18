@@ -13,7 +13,7 @@ from src.config import settings
 from src.storage.qdrant_client import ensure_collection
 
 _VECTOR_SIZES = {
-    "local": 768,
+    "local": 1024,
     "openai": 1536,
 }
 

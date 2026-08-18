@@ -22,7 +22,7 @@ class FakeSentenceTransformer:
         return FakeVectorArray([[0.1] * LocalEmbedder.vector_size for _ in texts])
 
 
-async def test_local_embedder_returns_768_dimensional_vectors() -> None:
+async def test_local_embedder_returns_1024_dimensional_vectors() -> None:
     model = FakeSentenceTransformer()
     embedder = LocalEmbedder(model=model)
 
@@ -31,4 +31,4 @@ async def test_local_embedder_returns_768_dimensional_vectors() -> None:
     assert model.received_texts == ["alpha", "beta"]
     assert model.normalize_embeddings is True
     assert len(vectors) == 2
-    assert all(len(vector) == 768 for vector in vectors)
+    assert all(len(vector) == 1024 for vector in vectors)

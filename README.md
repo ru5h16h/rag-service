@@ -10,6 +10,15 @@ This project uses:
 - `uv` for dependency resolution, installs, and command execution
 - `nox` for lint and test orchestration
 
+## Backing services
+
+- **Qdrant** — a hosted/managed instance reached over its API. `QDRANT_URL` and
+  `QDRANT_API_KEY` in `.env` point at that endpoint.
+- **Postgres** — a locally installed server. `PG_DSN` in `.env` points at it.
+
+Make sure the local Postgres service is running and the Qdrant API is reachable,
+then apply migrations with `uv run alembic upgrade head` before running the pipeline.
+
 Common commands:
 
 ```bash
